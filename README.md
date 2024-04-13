@@ -10,8 +10,9 @@ poetry run start
 ```
 poetry version
 poetry version -s
-```
+
 poetry version [patch, minor, major]
+```
 
 ```
 poetry build
