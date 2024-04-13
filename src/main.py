@@ -1,5 +1,7 @@
+from src import VERSION
+
 def main():
-    print("Hello datagouv-python!")
+    print(f"Hello datagouv-python v{VERSION}!")
 
 
 if __name__ == "__main__":
