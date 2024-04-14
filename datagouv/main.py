@@ -1,5 +1,6 @@
 from datagouv import VERSION
 
+
 def main():
     print(f"Hello datagouv-python v{VERSION}!")
 

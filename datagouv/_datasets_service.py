@@ -1,5 +1,6 @@
 from datagouv._data_requestor import DataRequestor
 
+
 class DatasetsService(object):
     def __init__(self, options):
         self.options = options
@@ -9,33 +10,39 @@ class DatasetsService(object):
         url = f"/datasets/{dataset_id}"
 
         return self.requestor.get(url)
-    
+
     def post_resource_file(self, dataset_id, filename):
-        url = f'/datasets/{dataset_id}/upload'
+        url = f"/datasets/{dataset_id}/upload"
 
         return self.requestor.post_file(url, filename)
-    
-    
+
     def put_resource_file(self, dataset_id, filename, resource_id):
-        url = f'/datasets/{dataset_id}/resources/{resource_id}/upload'
+        url = f"/datasets/{dataset_id}/resources/{resource_id}/upload"
 
         return self.requestor.post_file(url, filename)
-      
+
     def put_resource(self, dataset_id, resource):
-        resource_id = resource.get('id')
-        url = f'/datasets/{dataset_id}/resources/{resource_id}'
-        
+        resource_id = resource.get("id")
+        url = f"/datasets/{dataset_id}/resources/{resource_id}"
+
         return self.requestor.put(url, resource)
 
-    '''
+    def download_resources(self, dataset_id, directory_path):
+        """
+        TODO
+        """
+        return []
+
+    """
         only in api v2
         def get_resources(self, dataset_id, options={}):
         page = options.get('page', None)
         page_size = options.get('page_size', None)
 
-        url = f"/datasets/{dataset_id}/resources?"#page={page}&page_size={page_size}"
+        url = f"/datasets/{dataset_id}/resources?
+        "#page={page}&page_size={page_size}"
         url = url + f"page={page}" if page else url
         url = url + f"&page_size={page_size}" if page_size else url
         print(url)
         return self.requestor.get(url)
-    '''
+    """
