@@ -1,4 +1,4 @@
-import DataRequestor
+from datagouv._data_requestor import DataRequestor
 
 class DatasetsService(object):
     def __init__(self, options):

@@ -1,18 +1,18 @@
 [tool.poetry]
 name = "datagouv-python"
-version = "0.0.4"
+version = "0.0.15"
 description = ""
 authors = ["Maxime Pawlak <maxime.pawlak@amatek.fr>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "datagouv"}]
 
 [tool.poetry.scripts]
-start = "src.main:main"
+start = "datagouv.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pandas = "^2.2.2"
+pandas = "^2.0.0"
 toml = "^0.10.2"
 
 

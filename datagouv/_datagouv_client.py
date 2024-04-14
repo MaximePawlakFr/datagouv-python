@@ -1,4 +1,4 @@
-import DatasetsService
+from datagouv._datasets_service import DatasetsService
 
 class DatagouvClient(object):
     def __init__(self, api_key=None):
@@ -7,5 +7,5 @@ class DatagouvClient(object):
           "api_base_url": "https://www.data.gouv.fr/api",
           "api_version": "1"
         }
-
+        
         self.datasets = DatasetsService(self.options)
