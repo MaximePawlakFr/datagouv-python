@@ -4,8 +4,9 @@ import requests
 class DataRequestor(object):
     def __init__(self, options):
         self.options = options
-        self.base_url = f"{self.options.get('api_base_url')}\
-                /{self.options.get('api_version')}"
+        self.base_url = (
+            f"{self.options.get('api_base_url')}/{self.options.get('api_version')}"
+        )
         self.headers = {"X-API-KEY": self.options.get("api_key")}
 
     def get(self, url):

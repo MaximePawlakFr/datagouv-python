@@ -141,6 +141,7 @@ dataset = client.datasets.get(my_dataset_id)
 
 ```
 poetry run start
+poetry run black datagouv/
 poetry run flake8
 ```
 

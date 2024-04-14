@@ -39,8 +39,7 @@ class DatasetsService(object):
         page = options.get('page', None)
         page_size = options.get('page_size', None)
 
-        url = f"/datasets/{dataset_id}/resources?
-        "#page={page}&page_size={page_size}"
+        url = f"/datasets/{dataset_id}/resources?"#page={page}&page_size={page_size}"
         url = url + f"page={page}" if page else url
         url = url + f"&page_size={page_size}" if page_size else url
         print(url)
