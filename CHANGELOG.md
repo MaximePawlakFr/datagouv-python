@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add CHANGELOG
 
 ### Changed
 ### Removed
@@ -17,12 +16,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Security
 
-## [0.0.19] - 2024-04-15
-
+## [0.1.0] - 2024-04-15
 ### Added
+- Add CHANGELOG
 
-- Initial version
+## [0.0.19] - 2024-04-15
+### Added
+- ResourcesDownloader to download all resources from a dataset
+- DatagouvClient to get a dataset and its resources, post new resource, update resource 
 
 
-[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.0.19...HEAD
+[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.0.19...v0.1.0
 [0.0.19]: https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19
