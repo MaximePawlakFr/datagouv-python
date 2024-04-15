@@ -137,7 +137,8 @@ dataset = client.datasets.get(my_dataset_id)
 ```
 
 
-# Run
+
+# Development
 
 ```
 poetry run start
@@ -145,7 +146,7 @@ poetry run black datagouv/
 poetry run flake8
 ```
 
-# Build
+## Build
 ```
 poetry version
 poetry version -s
@@ -165,7 +166,7 @@ python -m twine upload --config-file .pypirc -r testpypi dist/*
 python -m twine upload --config-file .pypirc -r pypi dist/*
 ``` -->
 
-# Publish
+## Publish
 ```
 poetry config repositories.test-pypi https://test.pypi.org/legacy/
 poetry config pypi-token.test-pypi MY_TOKEN

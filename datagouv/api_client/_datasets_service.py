@@ -1,10 +1,15 @@
-from datagouv._data_requestor import DataRequestor
+from datagouv.api_client._data_requestor import DataRequestor
 
 
 class DatasetsService(object):
     def __init__(self, options):
         self.options = options
         self.requestor = DataRequestor(self.options)
+
+    def search(self, query, options):
+        url = f"/datasets?q={query}"
+
+        return self.requestor.get(url)
 
     def get(self, dataset_id):
         url = f"/datasets/{dataset_id}"
@@ -26,12 +31,6 @@ class DatasetsService(object):
         url = f"/datasets/{dataset_id}/resources/{resource_id}"
 
         return self.requestor.put(url, resource)
-
-    def download_resources(self, dataset_id, directory_path):
-        """
-        TODO
-        """
-        return []
 
     """
         only in api v2

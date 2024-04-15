@@ -1,4 +1,4 @@
-from datagouv._datasets_service import DatasetsService
+from datagouv.api_client._datasets_service import DatasetsService
 
 
 class DatagouvClient(object):
