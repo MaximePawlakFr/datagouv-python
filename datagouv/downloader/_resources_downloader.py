@@ -15,6 +15,8 @@ class ResourcesDownloader(object):
 
         self.client = DatagouvClient()
 
+        self.prepare()
+
     def prepare(self):
         """
         Fetch dataset, set resources and urls.
