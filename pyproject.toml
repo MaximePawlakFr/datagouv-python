@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datagouv-python"
-version = "0.0.17"
+version = "0.0.19"
 description = ""
 authors = ["Maxime Pawlak <maxime.pawlak@amatek.fr>"]
 license = "GPL-3.0-or-later"

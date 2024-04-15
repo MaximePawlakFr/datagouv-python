@@ -32,5 +32,6 @@ class ResourcesDownloader(object):
         """
         for url in self.urls:
             _utils.download(url, directory_path)
-
-        return
+        
+        return self.urls
+        
