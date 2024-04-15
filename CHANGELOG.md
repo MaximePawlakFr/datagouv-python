@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
+- Add CHANGELOG
+
 ### Changed
 ### Removed
 ### Fixed
@@ -20,4 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version
 
-https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19
+
+[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19...HEAD
+[0.0.19]: https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19
