@@ -44,3 +44,9 @@ class DataRequestor(object):
             return response.json()
         else:
             return response
+
+    def delete(self, url):
+        absolute_url = f"{self.base_url}{url}"
+        response = requests.delete(absolute_url, headers=self.headers)
+
+        return response

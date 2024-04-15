@@ -6,24 +6,20 @@ class DatasetsService(object):
         self.options = options
         self.requestor = DataRequestor(self.options)
 
-    def search(self, query, options):
+    def search(self, query):
         url = f"/datasets?q={query}"
-
         return self.requestor.get(url)
 
     def get(self, dataset_id):
         url = f"/datasets/{dataset_id}"
-
         return self.requestor.get(url)
 
     def post_resource_file(self, dataset_id, filename):
         url = f"/datasets/{dataset_id}/upload"
-
         return self.requestor.post_file(url, filename)
 
     def put_resource_file(self, dataset_id, filename, resource_id):
         url = f"/datasets/{dataset_id}/resources/{resource_id}/upload"
-
         return self.requestor.post_file(url, filename)
 
     def put_resource(self, dataset_id, resource):
@@ -31,6 +27,11 @@ class DatasetsService(object):
         url = f"/datasets/{dataset_id}/resources/{resource_id}"
 
         return self.requestor.put(url, resource)
+
+    def delete_resource(self, dataset_id, resource_id):
+        url = f"/datasets/{dataset_id}/resources/{resource_id}"
+
+        return self.requestor.delete(url)
 
     """
         only in api v2
