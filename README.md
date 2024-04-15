@@ -1,5 +1,7 @@
 # datagouv-python
 
+[![PyPI version](https://badge.fury.io/py/datagouv-python.svg)](https://badge.fury.io/py/datagouv-python)
+
 Unofficial python client for `data.gouv.fr`.
 
 Official documentation is here: https://guides.data.gouv.fr/guide-data.gouv.fr/api/reference.
@@ -42,7 +44,7 @@ downloader = ResourcesDownloader(dataset_id)
 downloader.download()
 ```
 
-
+---
 
 # Development
 
@@ -52,9 +54,9 @@ poetry run black datagouv/
 poetry run flake8
 ```
 
-## Build
+## Build and Publish
 
-### Process
+### Steps
 
 ```bash
 poetry version [patch, minor, major]
@@ -63,22 +65,23 @@ poetry build
 # Update CHANGELOG
 git commit -m "vX.X.X"
 git tag vX.X.X
-poetry deploy
+poetry publish
+git push --tags
+git push
 ```
 
-### Details
-```
+### Commands
+```bash
 poetry version
 poetry version -s
 
 poetry version [patch, minor, major]
 ```
 
-```
+```bash
 poetry build
 ```
 
-https://pypi.org/project/datagouv-python/
 
 <!-- 
 ```
@@ -88,16 +91,21 @@ python -m twine upload --config-file .pypirc -r testpypi dist/*
 python -m twine upload --config-file .pypirc -r pypi dist/*
 ``` -->
 
-## Publish
-```
+#### Config 
+```bash
+# test-pypi
 poetry config repositories.test-pypi https://test.pypi.org/legacy/
 poetry config pypi-token.test-pypi MY_TOKEN
-poetry config pypi-token.pypi MY_TOKEN
-```
-```
+
 poetry publish -r test-pypi 
+
+# pypi
+poetry config pypi-token.pypi MY_TOKEN
 poetry publish
 ```
+
+# Resources
+* https://pypi.org/project/datagouv-python/
 
 # Roadmap
 
