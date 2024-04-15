@@ -53,6 +53,20 @@ poetry run flake8
 ```
 
 ## Build
+
+### Process
+
+```bash
+poetry version [patch, minor, major]
+poetry install
+poetry build
+# Update CHANGELOG
+git commit -m "vX.X.X"
+git tag vX.X.X
+poetry deploy
+```
+
+### Details
 ```
 poetry version
 poetry version -s
