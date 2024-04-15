@@ -24,5 +24,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial version
 
 
-[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19...HEAD
+[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.0.19...HEAD
 [0.0.19]: https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19
