@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Security
 
+## [0.1.1] - 2024-04-16
+### Added
+- Add datasets_service.delete_resource(...)
+
 ## [0.1.0] - 2024-04-15
 ### Added
 - Add CHANGELOG
@@ -26,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - DatagouvClient to get a dataset and its resources, post new resource, update resource 
 
 
-[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.0.19...v0.1.0
 [0.0.19]: https://github.com/MaximePawlakFr/datagouv-python/releases/tag/v0.0.19
