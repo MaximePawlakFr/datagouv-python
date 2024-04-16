@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datagouv-python"
-version = "0.1.2"
+version = "0.1.3"
 description = "Unofficial python client for `data.gouv.fr`"
 authors = ["Maxime Pawlak <maxime.pawlak@amatek.fr>"]
 repository = "https://github.com/MaximePawlakFr/datagouv-python"
