@@ -1,4 +1,5 @@
 from __future__ import annotations
+import re
 from datagouv import DatagouvClient
 import datagouv.downloader._utils as _utils
 
@@ -11,6 +12,7 @@ class ResourcesDownloader(object):
         self,
         dataset_id: str,
         resource_types: str | list[str] = "all",
+        url_regex: str = None,
         DatagouvClient=DatagouvClient,
     ) -> None:
         """
@@ -27,6 +29,8 @@ class ResourcesDownloader(object):
         elif isinstance(resource_types, list):
             self.resource_types = resource_types
 
+        self.url_regex = url_regex
+
         self.client = DatagouvClient()
 
         self.prepare()
@@ -42,9 +46,10 @@ class ResourcesDownloader(object):
         for resource in self.resources:
             # Add url if type is allowed
             type = resource.get("type")
-            print(self.resource_types, type, type in self.resource_types)
-            if type in self.resource_types:
-                url = resource.get("url")
+            url = resource.get("url")
+            if type in self.resource_types and (
+                self.url_regex is None or re.search(self.url_regex, url) is not None
+            ):
                 self.urls.append(url)
 
         return None

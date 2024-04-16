@@ -4,8 +4,8 @@ from datagouv import ResourcesDownloader
 from datagouv.downloader._resources_downloader import RESOURCE_TYPES
 
 resource_1 = {"id": "r_1_id", "url": "r_1_url", "type": "main"}
-resource_2 = {"id": "r_2_id", "url": "r_2_url", "type": "main"}
-resource_3 = {"id": "r_3_id", "url": "r_3_url", "type": "documentation"}
+resource_2 = {"id": "r_2_id", "url": "r_2_url_2024", "type": "main"}
+resource_3 = {"id": "r_3_id", "url": "r_3_url_2024", "type": "documentation"}
 resource_4 = {"id": "r_4_id", "url": "r_4_url", "type": "other"}
 
 dataset_1_id = "id_d_1"
@@ -71,3 +71,14 @@ def test_main_and_doc_files():
     assert d.resource_types == ["main", "documentation"]
     assert len(d.resources) == 4
     assert len(d.urls) == 3
+
+
+def test_regex_urls():
+    d = ResourcesDownloader(
+        dataset_1_id, ["main"], "_2024", DatagouvClient=MockDatagouvClient
+    )
+    # Test files types
+    assert len(d.resources) == 4
+
+    # Only one url is type=main and contains '_2024'
+    assert len(d.urls) == 1
