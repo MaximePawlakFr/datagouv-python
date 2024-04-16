@@ -1,11 +1,13 @@
 [tool.poetry]
 name = "datagouv-python"
 version = "0.1.1"
-description = ""
+description = "Unofficial python client for `data.gouv.fr`"
 authors = ["Maxime Pawlak <maxime.pawlak@amatek.fr>"]
+repository = "https://github.com/MaximePawlakFr/datagouv-python"
 license = "GPL-3.0-or-later"
 readme = "README.md"
 packages = [{include = "datagouv"}]
+keywords = ["open-data", "opendata", "government"]
 
 [tool.poetry.scripts]
 start = "datagouv.main:main"
@@ -14,8 +16,11 @@ start = "datagouv.main:main"
 python = "^3.9"
 pandas = "^2.0.0"
 toml = "^0.10.2"
+
+[tool.poetry.group.dev.dependencies]
 flake8 = "^7.0.0"
 black = "^24.4.0"
+pytest = "^8.1.1"
 
 
 [build-system]

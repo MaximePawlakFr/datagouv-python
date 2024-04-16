@@ -1,6 +1,7 @@
 # datagouv-python
 
 [![PyPI version](https://badge.fury.io/py/datagouv-python.svg)](https://badge.fury.io/py/datagouv-python)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MaximePawlakFr/datagouv-python)
 
 Unofficial python client for `data.gouv.fr`.
 
@@ -72,6 +73,8 @@ git push
 
 ### Commands
 ```bash
+poetry add pytest --group dev
+
 poetry version
 poetry version -s
 
