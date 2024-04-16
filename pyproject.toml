@@ -16,6 +16,8 @@ start = "datagouv.main:main"
 python = "^3.9"
 pandas = "^2.0.0"
 toml = "^0.10.2"
+requests = "^2.31.0"
+tqdm = "^4.66.2"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.0.0"
