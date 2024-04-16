@@ -3,10 +3,7 @@ import datagouv.downloader._utils as _utils
 
 
 class ResourcesDownloader(object):
-    def __init__(
-        self,
-        dataset_id,
-    ):
+    def __init__(self, dataset_id, DatagouvClient=DatagouvClient):
         self.dataset_id = dataset_id
 
         self.dataset = None
@@ -32,6 +29,5 @@ class ResourcesDownloader(object):
         """
         for url in self.urls:
             _utils.download(url, directory_path)
-        
+
         return self.urls
-        
