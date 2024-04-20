@@ -11,6 +11,7 @@ and this project adheres to
 ### Added
 
 ### Changed
+* ResourcesDownloader: Set regex to title not url attribute
 
 ### Removed
 

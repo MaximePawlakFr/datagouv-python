@@ -12,7 +12,7 @@ class ResourcesDownloader(object):
         self,
         dataset_id: str,
         resource_types: str | list[str] = "all",
-        url_regex: str = None,
+        title_regex: str = None,
         DatagouvClient=DatagouvClient,
     ) -> None:
         """
@@ -29,7 +29,7 @@ class ResourcesDownloader(object):
         elif isinstance(resource_types, list):
             self.resource_types = resource_types
 
-        self.url_regex = url_regex
+        self.title_regex = title_regex
 
         self.client = DatagouvClient()
 
@@ -46,10 +46,11 @@ class ResourcesDownloader(object):
         for resource in self.resources:
             # Add url if type is allowed
             type = resource.get("type")
-            url = resource.get("url")
+            title = resource.get("title")
             if type in self.resource_types and (
-                self.url_regex is None or re.search(self.url_regex, url) is not None
+                self.title_regex is None or re.search(self.title_regex, title) is not None
             ):
+                url = resource.get("url")
                 self.urls.append(url)
 
         return None
