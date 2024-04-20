@@ -11,7 +11,8 @@ and this project adheres to
 ### Added
 
 ### Changed
-* ResourcesDownloader: Set regex to title not url attribute
+
+- ResourcesDownloader: Set regex to title not url attribute
 
 ### Removed
 
@@ -20,6 +21,12 @@ and this project adheres to
 ### Deprecated
 
 ### Security
+
+## [0.1.4] - 2024-04-20
+
+### Changed
+
+- ResourcesDownloader: Set regex to title not url attribute
 
 ## [0.1.3] - 2024-04-16
 
@@ -54,7 +61,8 @@ and this project adheres to
 - DatagouvClient to get a dataset and its resources, post new resource, update
   resource
 
-[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.3...HEAD
+[unreleased]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/MaximePawlakFr/datagouv-python/compare/v0.1.0...v0.1.1
