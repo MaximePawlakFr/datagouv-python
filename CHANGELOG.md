@@ -10,9 +10,9 @@ and this project adheres to
 
 ### Added
 
-### Changed
+- Examples.ipynb: add cells with title_regex
 
-- ResourcesDownloader: Set regex to title not url attribute
+### Changed
 
 ### Removed
 
