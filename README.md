@@ -62,10 +62,10 @@ poetry run flake8
 ```bash
 poetry version [patch, minor, major]
 poetry install
-poetry build
 # todo: Update CHANGELOG
 git commit -m "vX.X.X"
 git tag vX.X.X
+poetry build
 poetry publish
 git push --tags
 git push
