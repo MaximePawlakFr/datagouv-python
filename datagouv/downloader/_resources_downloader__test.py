@@ -60,7 +60,7 @@ def test_no_dataset_id():
     print(error)
     assert (
         str(error.value)
-        == "__init__() missing 1 required positional argument: 'dataset_id'"
+        == "ResourcesDownloader.__init__() missing 1 required positional argument: 'dataset_id'"
     )
 
 

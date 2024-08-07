@@ -48,7 +48,8 @@ class ResourcesDownloader(object):
             type = resource.get("type")
             title = resource.get("title")
             if type in self.resource_types and (
-                self.title_regex is None or re.search(self.title_regex, title) is not None
+                self.title_regex is None
+                or re.search(self.title_regex, title) is not None
             ):
                 url = resource.get("url")
                 self.urls.append(url)

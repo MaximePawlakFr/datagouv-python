@@ -5,7 +5,8 @@
 
 Unofficial python client for `data.gouv.fr`.
 
-Official documentation is here: https://guides.data.gouv.fr/guide-data.gouv.fr/api/reference.
+Official documentation is here:
+https://guides.data.gouv.fr/guide-data.gouv.fr/api/reference.
 
 Current API version supported = "1".
 
@@ -28,10 +29,10 @@ client.datasets.put_resource_file(my_dataset_id, filename, resource_id)
 
 # Update a resource
 client.datasets.put_resource(my_dataset_id, resource)
-
 ```
 
-## Download all resources
+## Download all resources to current directory
+
 ```python
 from datagouv import ResourcesDownloader
 
@@ -43,6 +44,21 @@ downloader = ResourcesDownloader(dataset_id)
 
 # Download to current directory
 downloader.download()
+```
+
+## Download only 'main' resources with "2024" in title
+
+```python
+from datagouv import ResourcesDownloader
+
+# Get a dataset: https://meteo.data.gouv.fr/datasets/656dab84db1bdf627a40eaae
+dataset_id = "656dab84db1bdf627a40eaae"
+
+# Instanciate ResourcesDownloader
+downloader = ResourcesDownloader(dataset_id, resource_types=["main"] ,title_regex="2024")
+
+# Download to 'output_dir' directory
+downloader.download("./output_dir")
 ```
 
 ---
@@ -60,9 +76,9 @@ poetry run flake8
 ### Steps
 
 ```bash
-poetry version [patch, minor, major]
+poetry version # [patch, minor, major]
 poetry install
-# todo: Update CHANGELOG
+# TODO: Update CHANGELOG
 git commit -m "vX.X.X"
 git tag vX.X.X
 poetry build
@@ -72,6 +88,7 @@ git push
 ```
 
 ### Commands
+
 ```bash
 poetry add pytest --group dev
 
@@ -85,8 +102,7 @@ poetry version [patch, minor, major]
 poetry build
 ```
 
-
-<!-- 
+<!--
 ```
 python -m build
 
@@ -94,7 +110,8 @@ python -m twine upload --config-file .pypirc -r testpypi dist/*
 python -m twine upload --config-file .pypirc -r pypi dist/*
 ``` -->
 
-#### Config 
+#### Config
+
 ```bash
 # test-pypi
 poetry config repositories.test-pypi https://test.pypi.org/legacy/
@@ -108,25 +125,25 @@ poetry publish
 ```
 
 # Resources
-* https://pypi.org/project/datagouv-python/
+
+- https://pypi.org/project/datagouv-python/
 
 # Roadmap
 
-* [ ] Handle /datasets routes
-* [ ] Handle other routes
-    * /site
-    * /reuses
-    * /discussions
-    * /organizations
-    * /spatial
-    * /users
-    * /me
-    * /workers
-    * /tags
-    * /topics
-    * /posts
-    * /transfer
-    * /notifications
-    * /avatars
-    * /harvest
-
+- [ ] Handle /datasets routes
+- [ ] Handle other routes
+  - /site
+  - /reuses
+  - /discussions
+  - /organizations
+  - /spatial
+  - /users
+  - /me
+  - /workers
+  - /tags
+  - /topics
+  - /posts
+  - /transfer
+  - /notifications
+  - /avatars
+  - /harvest
