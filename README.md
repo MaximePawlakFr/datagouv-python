@@ -87,6 +87,11 @@ git push --tags
 git push
 ```
 
+### Test
+```bash
+poetry run pytest
+```
+
 ### Commands
 
 ```bash
